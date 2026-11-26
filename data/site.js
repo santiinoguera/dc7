@@ -29,6 +29,7 @@ export const HEADER = {
   menu: [
     { texto: 'Promos', href: '#promos', soloConPromo: true }, // se oculta solo si no hay campaña activa
     { texto: 'Productos', href: '#productos' },
+    { texto: 'Precios', href: '#precios' },
     { texto: 'Cómo comprar', href: '#como-comprar' },
     { texto: 'Envíos', href: '#envios' },
     { texto: 'Preguntas', href: '#preguntas' },

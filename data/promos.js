@@ -122,7 +122,7 @@ export const CAMPANAS_PAUSADAS = [
     productos: [
       // EDITAR: sumá juguetes o regalos para chicos cuando tengas fotos.
       { nombre: 'Botella térmica para el cole', foto: '/productos/botella-fucsia.jpg', precio: null, precioPromo: null }, // EDITAR
-      { nombre: 'Botella sport 750 ml', foto: '/productos/botella-sport-lila.jpg', precio: 12600, precioPromo: null }, // EDITAR: precio del cartel del local, confirmalo
+      { nombre: 'Botella sport 750 ml', foto: '/productos/botella-sport-lila.jpg', precio: 11500, precioPromo: null }, // de la lista de precios del 26/11/2026
       { nombre: 'Vaso térmico con sorbete', foto: '/productos/vaso-termico-lila.jpg', precio: null, precioPromo: null }, // EDITAR
       { nombre: 'Auriculares vincha inalámbricos', foto: '/productos/auriculares-vincha.jpg', precio: null, precioPromo: null }, // EDITAR
     ],

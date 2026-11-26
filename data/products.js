@@ -62,7 +62,7 @@ export const PRODUCTOS = [
     id: 'botella-sport-750',
     nombre: 'Botella sport 750 ml',
     detalle: 'Con manija y pico rebatible',
-    precio: 12600, // EDITAR: tomado del cartel de la foto del local, confirmalo
+    precio: 11500, // de la lista de precios del 26/11/2026
     foto: '/productos/botella-sport-crema.jpg',
   },
   {

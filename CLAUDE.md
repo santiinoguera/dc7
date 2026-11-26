@@ -54,12 +54,12 @@ Mobile first: diseñar primero para ~390 px, sin scroll horizontal.
 ```
 app/            layout (SEO, OG, fuentes, botón flotante), page (orden de secciones), íconos
 components/     una sección por archivo + BotonWhatsApp, ProductCard, Countdown, usePromos
-data/           site.js (contacto y todos los textos), products.js, categories.js, navidad.js,
+data/           site.js (contacto y todos los textos), products.js, categories.js, catalogo.js (lista de precios), navidad.js,
                 reviews.js, faq.js, promos.js
 lib/            whatsapp.js (links), format.js (precios), promos.js (lógica de campañas)
 public/         logo.png, og-image.jpg, productos/*.jpg
 ```
-Orden de la página: BarraPromo (contador arriba de todo), Header, Hero, Producto estrella, **Promos**, Categorías, Destacados, Cómo comprar, Envíos, Pagos, Opiniones, FAQ, Footer.
+Orden de la página: BarraPromo (contador arriba de todo), Header, Hero, Producto estrella, **Promos**, Categorías, Destacados, Lista de precios, Cómo comprar, Envíos, Pagos, Opiniones, FAQ, Footer.
 La sección Navidad (`components/Christmas.js`, datos en `data/navidad.js`) está **pausada**: no se importa en `app/page.js`. Para volver a mostrarla, agregarla después de Destacados.
 
 ## Promos por fecha (`data/promos.js`)

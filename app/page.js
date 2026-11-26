@@ -5,6 +5,7 @@ import StarProduct from '@/components/StarProduct';
 import PromosSection from '@/components/PromosSection';
 import Categories from '@/components/Categories';
 import FeaturedProducts from '@/components/FeaturedProducts';
+import Catalogo from '@/components/Catalogo';
 import HowToBuy from '@/components/HowToBuy';
 import Shipping from '@/components/Shipping';
 import Payments from '@/components/Payments';
@@ -25,6 +26,7 @@ export default function Home() {
         <PromosSection />
         <Categories />
         <FeaturedProducts />
+        <Catalogo />
         <HowToBuy />
         <Shipping />
         <Payments />
