@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-blanco font-cuerpo text-negro antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* El header es fijo: que los anclas no queden tapados */
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-naranja;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
