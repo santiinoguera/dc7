@@ -45,12 +45,4 @@ export const CATEGORIAS = [
     foto: '/productos/freidora-liliana-cocina.jpg',
     mensaje: '¡Hola DC7! Quiero ver qué tienen para el hogar 🏠',
   },
-  {
-    id: 'navidad',
-    nombre: 'Navidad',
-    emoji: '🎄',
-    descripcion: 'Arbolitos, luces y adornos',
-    foto: null, // EDITAR: agregá una foto navideña cuando la tengas
-    mensaje: '¡Hola DC7! Quiero ver las cosas de Navidad 🎄',
-  },
 ];

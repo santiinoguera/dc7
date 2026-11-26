@@ -3,7 +3,7 @@ import TituloSeccion from './TituloSeccion';
 
 export default function Shipping() {
   return (
-    <section id="envios" className="scroll-mt-20 bg-amarillo/50 py-16 sm:py-20">
+    <section id="envios" className="scroll-mt-[calc(5rem+var(--barra,0px))] bg-amarillo/50 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <TituloSeccion titulo={ENVIOS.titulo} subtitulo={ENVIOS.subtitulo} />
         <ul className="grid gap-4 md:grid-cols-3">

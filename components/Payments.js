@@ -2,7 +2,7 @@ import { PAGOS } from '@/data/site';
 
 export default function Payments() {
   return (
-    <section id="pagos" className="scroll-mt-20 bg-blanco py-16 sm:py-20">
+    <section id="pagos" className="scroll-mt-[calc(5rem+var(--barra,0px))] bg-blanco py-16 sm:py-20">
       <div className="mx-auto max-w-3xl px-4">
         <div className="rounded-[2rem] bg-negro p-8 text-center text-blanco sm:p-12">
           <h2 className="font-titulo text-3xl font-bold sm:text-4xl">{PAGOS.titulo}</h2>

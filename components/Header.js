@@ -13,7 +13,7 @@ export default function Header() {
   const links = HEADER.menu.filter((l) => !l.soloConPromo || actual);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-negro/5 bg-blanco/90 backdrop-blur-md">
+    <header style={{ top: 'var(--barra, 0px)' }} className="fixed inset-x-0 z-40 transition-[top] duration-300 border-b border-negro/5 bg-blanco/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4">
         <a href="#inicio" className="flex items-center gap-2" aria-label="DaleClick7, volver al inicio">
           <Image src="/logo.png" alt="Logo DaleClick7" width={44} height={44} priority className="h-11 w-11" />

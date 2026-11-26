@@ -4,6 +4,7 @@
 
 @layer base {
   html {
+    --barra: 0px;
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
   }
@@ -13,7 +14,7 @@
   }
   /* El header es fijo: que los anclas no queden tapados */
   section[id] {
-    scroll-margin-top: 4.5rem;
+    scroll-margin-top: calc(4.5rem + var(--barra, 0px));
   }
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-naranja;

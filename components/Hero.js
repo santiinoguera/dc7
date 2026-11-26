@@ -4,7 +4,7 @@ import BotonWhatsApp from './BotonWhatsApp';
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden bg-blanco pt-24 sm:pt-28">
+    <section id="inicio" style={{ paddingTop: 'calc(6.5rem + var(--barra, 0px))' }} className="relative overflow-hidden bg-blanco">
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-16 md:grid-cols-2 md:pb-24">
         <div>
           <span className="inline-block rounded-full bg-amarillo px-4 py-1.5 font-titulo text-sm font-semibold text-negro">

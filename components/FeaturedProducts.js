@@ -5,7 +5,7 @@ import TituloSeccion from './TituloSeccion';
 
 export default function FeaturedProducts() {
   return (
-    <section id="productos" className="scroll-mt-20 bg-blanco py-16 sm:py-20">
+    <section id="productos" className="scroll-mt-[calc(5rem+var(--barra,0px))] bg-blanco py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <TituloSeccion titulo={DESTACADOS.titulo} subtitulo={DESTACADOS.subtitulo} />
         <ul className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">

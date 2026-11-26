@@ -53,15 +53,34 @@ export default function PromosSection() {
   const textoCuenta = actual.etapa === 'previa' ? `${T.faltan} ${c.textoCuenta}` : c.textoExtension;
 
   return (
-    <section id="promos" className="scroll-mt-20 bg-blanco py-16 sm:py-20">
+    <section id="promos" className="scroll-mt-[calc(5rem+var(--barra,0px))] bg-blanco py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         {/* Banner */}
         <div className={`relative overflow-hidden rounded-[2rem] p-6 sm:p-10 ${tema.banner}`}>
-          <span className="pointer-events-none absolute -right-4 -top-6 select-none text-[9rem] leading-none opacity-15 sm:text-[12rem]" aria-hidden="true">
-            {c.emoji}
-          </span>
+          {!c.imagen && (
+            <span className="pointer-events-none absolute -right-4 -top-6 select-none text-[9rem] leading-none opacity-15 sm:text-[12rem]" aria-hidden="true">
+              {c.emoji}
+            </span>
+          )}
 
-          <div className="relative">
+          {c.imagen && (
+            <>
+              {/* resplandor naranja detrás del sello */}
+              <span className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-naranja/30 blur-3xl sm:h-96 sm:w-96" aria-hidden="true" />
+              <div className="relative mx-auto mb-6 w-44 animate-flotar motion-reduce:animate-none sm:absolute sm:right-8 sm:top-8 sm:mb-0 sm:w-56 lg:right-12 lg:w-72">
+                <Image
+                  src={c.imagen}
+                  alt={`${c.nombre} DaleClick7`}
+                  width={640}
+                  height={640}
+                  sizes="(min-width: 1024px) 288px, (min-width: 640px) 224px, 176px"
+                  className="h-auto w-full drop-shadow-[0_10px_30px_rgba(249,127,16,0.45)]"
+                />
+              </div>
+            </>
+          )}
+
+          <div className={`relative ${c.imagen ? 'sm:pr-64 lg:pr-80' : ''}`}>
             <div className="flex flex-wrap gap-2">
               <span className={`rounded-full px-4 py-1.5 font-titulo text-sm font-semibold ${tema.chip}`}>
                 {c.emoji} {T.etiquetaSeccion}: {c.nombre}

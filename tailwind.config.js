@@ -28,6 +28,34 @@ module.exports = {
       boxShadow: {
         tarjeta: '0 10px 30px -12px rgba(20, 20, 20, 0.18)',
       },
+      keyframes: {
+        // Barra de promo: entra desde arriba
+        'barra-entra': {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        // Número que cambia: pequeño salto
+        salto: {
+          '0%': { transform: 'translateY(-35%)', opacity: '0.4' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        // Brillo que cruza la barra
+        brillo: {
+          '0%': { transform: 'translateX(-100%)' },
+          '60%, 100%': { transform: 'translateX(250%)' },
+        },
+        // Sello de la campaña flotando suave
+        flotar: {
+          '0%, 100%': { transform: 'translateY(0) rotate(-4deg)' },
+          '50%': { transform: 'translateY(-8px) rotate(2deg)' },
+        },
+      },
+      animation: {
+        'barra-entra': 'barra-entra 0.5s cubic-bezier(0.22, 1, 0.36, 1) both',
+        salto: 'salto 0.25s ease-out',
+        brillo: 'brillo 3.5s ease-in-out infinite',
+        flotar: 'flotar 4s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

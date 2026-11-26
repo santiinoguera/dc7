@@ -4,7 +4,7 @@ import TituloSeccion from './TituloSeccion';
 
 export default function Reviews() {
   return (
-    <section id="opiniones" className="scroll-mt-20 bg-amarillo/50 py-16 sm:py-20">
+    <section id="opiniones" className="scroll-mt-[calc(5rem+var(--barra,0px))] bg-amarillo/50 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <TituloSeccion titulo={OPINIONES_TEXTOS.titulo} subtitulo={OPINIONES_TEXTOS.subtitulo} />
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

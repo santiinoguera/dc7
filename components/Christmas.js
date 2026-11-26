@@ -7,7 +7,7 @@ import TituloSeccion from './TituloSeccion';
 
 export default function Christmas() {
   return (
-    <section id="navidad" className="scroll-mt-20 bg-negro py-16 text-blanco sm:py-20">
+    <section id="navidad" className="scroll-mt-[calc(5rem+var(--barra,0px))] bg-negro py-16 text-blanco sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <TituloSeccion titulo={NAVIDAD_TEXTOS.titulo} subtitulo={NAVIDAD_TEXTOS.subtitulo} claro />
 

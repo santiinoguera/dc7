@@ -10,7 +10,7 @@ export default function Faq() {
   const [abierta, setAbierta] = useState(0);
 
   return (
-    <section id="preguntas" className="scroll-mt-20 bg-blanco py-16 sm:py-20">
+    <section id="preguntas" className="scroll-mt-[calc(5rem+var(--barra,0px))] bg-blanco py-16 sm:py-20">
       <div className="mx-auto max-w-3xl px-4">
         <TituloSeccion titulo={FAQ_TEXTOS.titulo} subtitulo={FAQ_TEXTOS.subtitulo} />
         <ul className="flex flex-col gap-3">

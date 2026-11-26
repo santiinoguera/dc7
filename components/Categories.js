@@ -6,17 +6,20 @@ import TituloSeccion from './TituloSeccion';
 
 export default function Categories() {
   return (
-    <section id="categorias" className="scroll-mt-20 bg-amarillo/50 py-16 sm:py-20">
+    <section id="categorias" className="scroll-mt-[calc(5rem+var(--barra,0px))] bg-amarillo/50 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <TituloSeccion titulo={CATEGORIAS_TEXTOS.titulo} subtitulo={CATEGORIAS_TEXTOS.subtitulo} />
         <ul className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3">
-          {CATEGORIAS.map((c) => (
-            <li key={c.id}>
+          {CATEGORIAS.map((c, i) => {
+            // Si quedan impares, la última ocupa todo el ancho en el celu
+            const sola = CATEGORIAS.length % 2 === 1 && i === CATEGORIAS.length - 1;
+            return (
+            <li key={c.id} className={sola ? 'col-span-2 md:col-span-1' : ''}>
               <a
                 href={linkWhatsApp(c.mensaje)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-3xl bg-naranja p-4 shadow-tarjeta sm:aspect-[4/3] sm:p-6"
+                className={`group relative flex ${sola ? 'aspect-[2/1] md:aspect-[4/3]' : 'aspect-[4/5] sm:aspect-[4/3]'} flex-col justify-end overflow-hidden rounded-3xl bg-naranja p-4 shadow-tarjeta sm:p-6`}
               >
                 {c.foto ? (
                   <>
@@ -43,7 +46,8 @@ export default function Categories() {
                 </div>
               </a>
             </li>
-          ))}
+            );
+          })}
         </ul>
       </div>
     </section>

@@ -27,7 +27,7 @@ export const BENEFICIO_BASE = '🚚 Envío bonificado en Rosario y zona';
 export const LINEA_FIJA =
   'Pedidos por encargo, entrega en unos 2 días. Se confirman una vez abonados (transferencia o efectivo).';
 
-// Textos de la sección que no dependen de la campaña.
+// Textos de la sección y de la barra de arriba que no dependen de la campaña.
 export const PROMOS_TEXTOS = {
   etiquetaSeccion: 'Promos por fecha',
   faltan: 'Faltan',
@@ -40,6 +40,12 @@ export const PROMOS_TEXTOS = {
   sinPrecio: 'Consultá precio 💬',
   despuesViene: 'Después viene:',
   limitePedidos: 'Pedidos hasta el',
+  // Barra animada de arriba de todo
+  barraFaltan: 'faltan',
+  barraExtendido: 'extendido',
+  barraTermina: 'termina en',
+  barraVer: 'Ver promos',
+  barraCerrar: 'Cerrar aviso',
 };
 
 export const CAMPANAS = [
@@ -55,6 +61,7 @@ export const CAMPANAS = [
     subtitulo:
       'Auris, smartwatch y electrónica para darte el gusto (o regalar y quedar como un rey). Avisá rápido que vuela.',
     emoji: '🖤',
+    imagen: '/promos/black-friday.png', // sello de la campaña (opcional, null = sin imagen)
     colorDestacado: 'negro',
     mensajeWhatsApp: '¡Hola DC7! 👋 Vengo por la promo de Black Friday 🔥',
     fechaLimitePedidos: null, // EDITAR: ej '2026-11-30'
@@ -68,6 +75,10 @@ export const CAMPANAS = [
       { nombre: 'Freidora de aire Liliana 6,5 L', foto: '/productos/freidora-liliana.jpg', precio: null, precioPromo: null }, // EDITAR
     ],
   },
+];
+
+// CAMPAÑAS PAUSADAS: no se muestran. Para activar una, movela (cortar y pegar) al array CAMPANAS de arriba.
+export const CAMPANAS_PAUSADAS = [
   {
     id: 'navidad',
     nombre: 'Navidad',

@@ -3,7 +3,7 @@ import TituloSeccion from './TituloSeccion';
 
 export default function HowToBuy() {
   return (
-    <section id="como-comprar" className="scroll-mt-20 bg-blanco py-16 sm:py-20">
+    <section id="como-comprar" className="scroll-mt-[calc(5rem+var(--barra,0px))] bg-blanco py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <TituloSeccion titulo={COMO_COMPRAR.titulo} subtitulo={COMO_COMPRAR.subtitulo} />
         <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

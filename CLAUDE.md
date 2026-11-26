@@ -59,7 +59,8 @@ data/           site.js (contacto y todos los textos), products.js, categories.j
 lib/            whatsapp.js (links), format.js (precios), promos.js (lógica de campañas)
 public/         logo.png, og-image.jpg, productos/*.jpg
 ```
-Orden de la página: Header, Hero, Producto estrella, **Promos**, Categorías, Destacados, Navidad, Cómo comprar, Envíos, Pagos, Opiniones, FAQ, Footer.
+Orden de la página: BarraPromo (contador arriba de todo), Header, Hero, Producto estrella, **Promos**, Categorías, Destacados, Cómo comprar, Envíos, Pagos, Opiniones, FAQ, Footer.
+La sección Navidad (`components/Christmas.js`, datos en `data/navidad.js`) está **pausada**: no se importa en `app/page.js`. Para volver a mostrarla, agregarla después de Destacados.
 
 ## Promos por fecha (`data/promos.js`)
 La sección se arma sola según la fecha de hoy en hora de Argentina (UTC-3). El cálculo corre **en el navegador**
@@ -69,7 +70,8 @@ La sección se arma sola según la fecha de hoy en hora de Argentina (UTC-3). El
 - `BENEFICIO_BASE`: chip que aparece en todas las campañas (envío bonificado).
 - `LINEA_FIJA`: línea debajo de las tarjetas.
 - `PROMOS_TEXTOS`: textos fijos de la sección (botones, "Faltan", "Después viene:", etc.).
-- `CAMPANAS`: array de campañas.
+- `CAMPANAS`: array de campañas que se muestran.
+- `CAMPANAS_PAUSADAS`: campañas guardadas que no se muestran (hoy: Navidad y Reyes). Para activar una, moverla a `CAMPANAS`.
 
 ### Estructura de una campaña
 ```js
@@ -82,6 +84,7 @@ La sección se arma sola según la fecha de hoy en hora de Argentina (UTC-3). El
   textoCuenta: 'para el Black Friday',             // se muestra "Faltan para el Black Friday"
   textoExtension: '⚡ ¡Extendido hasta el Cyber Monday! Termina en', // desde fechaEvento hasta fechaFin
   titulo: '...', subtitulo: '...', emoji: '🖤',
+  imagen: '/promos/black-friday.png', // sello de la campaña en el banner (opcional; null = emoji de fondo)
   colorDestacado: 'negro',         // SOLO 'naranja' | 'negro' | 'blanco' | 'amarillo'
   mensajeWhatsApp: '...',          // mensaje del botón grande del banner
   fechaLimitePedidos: null,        // 'AAAA-MM-DD' o null (no se muestra)
@@ -96,7 +99,8 @@ La sección se arma sola según la fecha de hoy en hora de Argentina (UTC-3). El
 - Antes de `fechaEvento`: "Faltan …" + cuenta hasta el evento. Desde `fechaEvento` hasta `fechaFin`: `textoExtension` + cuenta hasta el fin.
 - Al terminar, pasa sola a la siguiente (se recalcula cada segundo).
 - "Después viene:" muestra otra campaña activa superpuesta o, si no hay, la próxima en empezar.
-- Sin campaña activa: la sección no se renderiza y el link "Promos" del header desaparece (`soloConPromo: true` en `data/site.js`).
+- Barra superior (`components/BarraPromo.js`): fija arriba del header, con la cuenta regresiva de la campaña activa, animada (entra desde arriba, punto que late, segundos con salto, brillo). Se cierra con la ✕ (por esa visita, `sessionStorage`). Ocupa `--barra` (2.5rem): header, hero y anclas usan esa variable para correrse.
+- Sin campaña activa: la sección no se renderiza, la barra superior tampoco y el link "Promos" del header desaparece (`soloConPromo: true` en `data/site.js`).
 - `precio: null` → "Consultá precio". `precioPromo: null` → solo precio normal. Con `precioPromo` → precio tachado + chip PROMO.
 - Probar otra fecha: `http://localhost:3000/?fecha=2026-12-20` (simula ese día al mediodía).
 
