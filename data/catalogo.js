@@ -134,8 +134,8 @@ export const PRODUCTOS = [
     descripcion: 'Bolso matero acolchado con chau lata. Termo, mate y yerba en un solo lugar.' },
   { id: 'termo-system-mate', cat: 'termos', nombre: 'Termo Stanley System 1 L con mate y bombilla', precio: 25850, foto: '/productos/c/termo-system-mate.jpg',
     descripcion: 'Termo de acero de 1 litro con mate y bombilla. El combo matero completo.' },
-  { id: 'botella-infantil-450', cat: 'termos', nombre: 'Botella infantil 450 ml de acero', precio: 24750, foto: '/productos/c/botella-infantil-450.jpg',
-    descripcion: 'Botella de acero para chicos con pico de goma.' },
+  { id: 'botella-infantil-450', cat: 'termos', nombre: 'Botellita infantil 450 ml con tapa de animalito', precio: 24750, foto: '/productos/c/botellitas-animalitos.jpg', destacado: true,
+    descripcion: 'Botellita de acero inoxidable para los más chicos, con tapa de animalito. Ideal para el jardín y la escuela.', colores: ['Tigre', 'Ciervo', 'Dino', 'Zorro', 'Elefante', 'Panda', 'Oveja', 'Pajarito', 'Vaca'] }
   { id: 'tabla-vaso-bolso', cat: 'termos', nombre: 'Set asado con bolso Central, Newell\'s y Boca', precio: 19499, foto: '/productos/c/tabla-vaso-bolso.jpg',
     descripcion: 'Tabla de madera, vaso y cubiertos en un bolso. Para el asado o para regalar.' },
   { id: 'termo-media-manija', cat: 'termos', nombre: 'Termo de acero media manija 1 L', precio: 18499, foto: '/productos/c/termo-media-manija.jpg',
@@ -246,7 +246,6 @@ export const PRODUCTOS = [
   { id: 'stanley-bidon', cat: 'termos', nombre: 'Bidón Stanley floreado con 2 vasitos', precio: null, foto: '/productos/c/stanley-bidon.jpg', descripcion: 'Bidón térmico floreado con manija y dos vasitos que van enganchados al costado.', colores: ['Lila', 'Verde', 'Celeste', 'Azul', 'Crema', 'Negro con estrellas'] },
   { id: 'set-afa', cat: 'termos', nombre: 'Set matero AFA: termo, mate y yerbera', precio: null, foto: '/productos/c/set-afa.jpg', descripcion: 'Set matero de la Selección con termo, mate y yerbera.', colores: ['Blanco', 'Negro'] },
   { id: 'botella-clubes', cat: 'termos', nombre: 'Botella River, Boca, Central y Newell\'s', precio: null, foto: '/productos/c/botella-clubes.jpg', descripcion: 'Botella de acero negra grabada con el escudo de tu club.', colores: ['River', 'Boca', 'Central', 'Newell\'s'] },
-  { id: 'botellitas-animalitos', cat: 'termos', nombre: 'Botellitas infantiles de animalitos', precio: null, foto: '/productos/c/botellitas-animalitos.jpg', descripcion: 'Botellitas para los más chicos con tapa de animalito.' },
   // Cocina
   { id: 'individuales', cat: 'cocina', nombre: 'Individuales redondos', precio: null, foto: '/productos/c/individuales.jpg', descripcion: 'Individuales redondos para la mesa.', colores: ['Negro', 'Verde', 'Blanco', 'Beige', 'Gris'] },
   { id: 'vasos-colores', cat: 'cocina', nombre: 'Vasos de colores', precio: null, foto: '/productos/c/vasos-colores.jpg', descripcion: 'Vasos facetados de colores para una mesa con onda.', colores: ['Rojo', 'Turquesa', 'Rosa', 'Amarillo'] },
