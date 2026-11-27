@@ -1,4 +1,5 @@
 import BarraPromo from '@/components/BarraPromo';
+import IntroPromo from '@/components/IntroPromo';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import StarProduct from '@/components/StarProduct';
@@ -18,6 +19,7 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <>
+      <IntroPromo />
       <BarraPromo />
       <Header />
       <main>

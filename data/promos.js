@@ -47,6 +47,10 @@ export const PROMOS_TEXTOS = {
   barraVer: 'Ver promos',
   barraCerrar: 'Cerrar aviso',
   verTodos: 'Ver los {n} productos 👇',
+  // Animación de entrada
+  introTitulo: '🔥 {campana} DC7',
+  introExtension: '⚡ Extendido hasta el Cyber Monday',
+  introSaltar: 'Tocá para entrar',
   verMenos: 'Ver menos',
 };
 
@@ -64,6 +68,7 @@ export const CAMPANAS = [
       'Auris, smartwatch y electrónica para darte el gusto (o regalar y quedar como un rey). Avisá rápido que vuela.',
     emoji: '🖤',
     imagen: '/promos/black-friday.png', // sello de la campaña (opcional, null = sin imagen)
+    intro: true, // muestra la animación con el sello al entrar a la web (necesita imagen)
     colorDestacado: 'negro',
     mensajeWhatsApp: '¡Hola DC7! 👋 Vengo por la promo de Black Friday 🔥',
     fechaLimitePedidos: null, // EDITAR: ej '2026-11-30'

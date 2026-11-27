@@ -46,6 +46,21 @@ module.exports = {
         },
         // Sello de la campaña flotando suave
         aparecer: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+        // Intro: el sello entra girando y rebota
+        'intro-sello': {
+          '0%': { transform: 'scale(0.2) rotate(-25deg)', opacity: '0' },
+          '55%': { transform: 'scale(1.1) rotate(6deg)', opacity: '1' },
+          '75%': { transform: 'scale(0.96) rotate(-2deg)' },
+          '100%': { transform: 'scale(1) rotate(0)', opacity: '1' },
+        },
+        'intro-texto': {
+          '0%': { transform: 'translateY(16px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'intro-glow': {
+          '0%, 100%': { transform: 'scale(0.9)', opacity: '0.5' },
+          '50%': { transform: 'scale(1.15)', opacity: '0.9' },
+        },
         subir: { '0%': { transform: 'translateY(100%)' }, '100%': { transform: 'translateY(0)' } },
         flotar: {
           '0%, 100%': { transform: 'translateY(0) rotate(-4deg)' },
@@ -58,6 +73,9 @@ module.exports = {
         brillo: 'brillo 3.5s ease-in-out infinite',
         flotar: 'flotar 4s ease-in-out infinite',
         aparecer: 'aparecer 0.2s ease-out both',
+        'intro-sello': 'intro-sello 0.9s cubic-bezier(0.22, 1, 0.36, 1) both',
+        'intro-texto': 'intro-texto 0.5s ease-out 0.6s both',
+        'intro-glow': 'intro-glow 1.6s ease-in-out infinite',
         subir: 'subir 0.32s cubic-bezier(0.22, 1, 0.36, 1) both',
       },
     },
