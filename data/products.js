@@ -3,13 +3,13 @@
 // - Precios: número entero sin puntos (27000, no 27.000). Se formatea solo.
 // - Si un precio es null, la tarjeta muestra "Consultá precio".
 // - Fotos: van en /public/productos/. Poné acá la ruta empezando con /productos/...
-// - Nombres: no pongas marcas que no sean originales (usá "tipo AirPods", etc.).
+// - Nombres: con el nombre de la marca.
 // =============================================================
 
 // ---------- PRODUCTO ESTRELLA ----------
 export const PRODUCTO_ESTRELLA = {
   etiqueta: '⭐ Producto estrella',
-  nombre: 'Auriculares tipo AirPods Pro',
+  nombre: 'AirPods Pro',
   titulo: 'Los auris que todos te preguntan dónde compraste 🎧',
   descripcion:
     'Cancelación de ruido (ANC), estuche de carga y almohadillas de repuesto en 3 tamaños. Se conectan al toque con el celu.',
@@ -22,7 +22,7 @@ export const PRODUCTO_ESTRELLA = {
   precio: 27000, // EDITAR: precio de ejemplo, poné el precio real
   boton: 'Quiero los míos',
   fotos: [
-    { src: '/productos/airpods-abiertos.jpg', alt: 'Auriculares tipo AirPods Pro con estuche abierto y almohadillas' },
+    { src: '/productos/airpods-abiertos.jpg', alt: 'AirPods Pro con estuche abierto y almohadillas' },
     { src: '/productos/airpods-caja-sello.jpg', alt: 'Caja cerrada de los auriculares con sello ANC' },
     { src: '/productos/airpods-caja-mano.jpg', alt: 'Caja de auriculares en la mano' },
   ],

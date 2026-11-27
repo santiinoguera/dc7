@@ -6,7 +6,7 @@
 // - colores: opcional, lista de colores disponibles.
 // - destacado: true = aparece en "Lo que más sale".
 // - Para sumar un producto: copiá una línea y cambiala. El id no se puede repetir.
-// - Nombres: los productos con logos de otras marcas o clubes van con nombre genérico.
+// - Nombres: van con el nombre de la marca (pedido del dueño, 28/11/2026).
 // Lista de precios de venta: 27/11/2026.
 // =============================================================
 
@@ -61,7 +61,7 @@ export const PRODUCTOS = [
     descripcion: 'Soporte fijo de pared para teles de 26" a 63". Incluye tornillos y tarugos.' },
   { id: 'soporte-tv-14-42', cat: 'electronica', nombre: 'Soporte TV fijo 14" a 42"', precio: 5049, foto: '/productos/c/soporte-tv-14-42.jpg',
     descripcion: 'Soporte fijo de pared para teles de 14" a 42".' },
-  { id: 'airpods', cat: 'electronica', nombre: 'Auriculares tipo AirPods Pro', precio: 27000, foto: '/productos/airpods-abiertos.jpg', // EDITAR: confirmá el precio
+  { id: 'airpods', cat: 'electronica', nombre: 'AirPods Pro', precio: 27000, foto: '/productos/airpods-abiertos.jpg', // EDITAR: confirmá el precio
     descripcion: 'Auriculares inalámbricos con estuche de carga y almohadillas de repuesto.' },
 
   // ---------- COCINA ----------
@@ -69,8 +69,8 @@ export const PRODUCTOS = [
     descripcion: 'Set de 3 tablas (30×20, 35×25 y 40×30 cm) con canaleta para jugos y patitas antideslizantes.' },
   { id: 'cacerola-teflon-20', cat: 'cocina', nombre: 'Cacerola Tefal 20 cm con tapa', precio: 26950, foto: '/productos/c/cacerola-tefal-20.jpg',
     descripcion: 'Cacerola antiadherente de 20 cm con tapa de vidrio.' },
-  { id: 'frapera', cat: 'cocina', nombre: 'Frapera de metal (diseños varios)', precio: 24199, foto: '/productos/c/frapera.jpg',
-    descripcion: 'Frapera negra con manijas para tener las bebidas frías en la juntada. Consultá los diseños disponibles.' },
+  { id: 'frapera', cat: 'cocina', nombre: 'Frapera Heineken, Stella Artois y clubes', precio: 24199, foto: '/productos/c/frapera.jpg',
+    descripcion: 'Frapera negra con manijas para tener las bebidas frías en la juntada.' },
   { id: 'escurridor-2-pisos', cat: 'cocina', nombre: 'Escurridor de metal 2 pisos', precio: 22770, foto: '/productos/c/escurridor-2-pisos.jpg',
     descripcion: 'Escurridor cromado de dos niveles con bandeja y porta cubiertos.' },
   { id: 'organizador-cubiertos', cat: 'cocina', nombre: 'Organizador de cubiertos', precio: 20899, foto: '/productos/c/organizador-cubiertos.jpg',
@@ -97,6 +97,7 @@ export const PRODUCTOS = [
     descripcion: 'Copa de vidrio clásica para vino o agua.' },
   { id: 'pela-papa', cat: 'cocina', nombre: 'Pela papa de acero 21 cm', precio: 3999, foto: '/productos/c/pela-papa.jpg',
     descripcion: 'Pelador de acero inoxidable de 21 cm.' },
+  { id: 'pinzas-x3', cat: 'cocina', nombre: 'Pinzas de acero x3', precio: null, foto: '/productos/c/pinzas-x3.jpg', descripcion: 'Set de 3 pinzas de acero de distintos tamaños. Para la parrilla y la cocina.' },
   { id: 'colapasta', cat: 'cocina', nombre: 'Colapasta Florida', precio: 3999, foto: '/productos/c/colapasta.jpg',
     descripcion: 'Colador plástico para pastas y verduras.', colores: ['Verde', 'Azul', 'Verde claro', 'Rojo'] },
   { id: 'copa-champana', cat: 'cocina', nombre: 'Copa de champaña', precio: 2650, foto: '/productos/c/copa-champana.jpg',
@@ -127,19 +128,19 @@ export const PRODUCTOS = [
     descripcion: 'Paraguas básico. Consultá modelos.' },
 
   // ---------- TERMOS Y MATES ----------
-  { id: 'jarra-acero-2l', cat: 'termos', nombre: 'Jarra térmica de acero 2 L con vaso y bombilla', precio: 32890, foto: '/productos/c/jarra-acero-2l.jpg', destacado: true,
+  { id: 'jarra-acero-2l', cat: 'termos', nombre: 'Jarra Stanley 2 L con vaso y bombilla', precio: 32890, foto: '/productos/c/jarra-acero-2l.jpg', destacado: true,
     descripcion: 'Jarra térmica de acero con tapa, vaso y bombilla. Para el tereré o la limonada bien fría.', colores: ['Celeste', 'Coral', 'Verde', 'Negro'] },
   { id: 'bolso-matero', cat: 'termos', nombre: 'Bolso matero + chau lata', precio: 29590, foto: '/productos/c/bolso-matero.jpg',
     descripcion: 'Bolso matero acolchado con chau lata. Termo, mate y yerba en un solo lugar.' },
-  { id: 'termo-system-mate', cat: 'termos', nombre: 'Termo 1 L con mate y bombilla', precio: 25850, foto: '/productos/c/termo-system-mate.jpg',
+  { id: 'termo-system-mate', cat: 'termos', nombre: 'Termo Stanley System 1 L con mate y bombilla', precio: 25850, foto: '/productos/c/termo-system-mate.jpg',
     descripcion: 'Termo de acero de 1 litro con mate y bombilla. El combo matero completo.' },
-  { id: 'botella-infantil-450', cat: 'termos', nombre: 'Botella infantil 450 ml de acero', precio: 24750, foto: null,
+  { id: 'botella-infantil-450', cat: 'termos', nombre: 'Botella infantil 450 ml de acero', precio: 24750, foto: '/productos/c/botella-infantil-450.jpg',
     descripcion: 'Botella de acero para chicos con pico de goma.' },
-  { id: 'tabla-vaso-bolso', cat: 'termos', nombre: 'Set tabla + vaso + cubiertos con bolso (diseños de equipos)', precio: 19499, foto: '/productos/c/tabla-vaso-bolso.jpg',
-    descripcion: 'Tabla de madera, vaso y cubiertos en un bolso. Para el asado o regalar. Consultá los diseños.' },
+  { id: 'tabla-vaso-bolso', cat: 'termos', nombre: 'Set asado con bolso Central, Newell\'s y Boca', precio: 19499, foto: '/productos/c/tabla-vaso-bolso.jpg',
+    descripcion: 'Tabla de madera, vaso y cubiertos en un bolso. Para el asado o para regalar.' },
   { id: 'termo-media-manija', cat: 'termos', nombre: 'Termo de acero media manija 1 L', precio: 18499, foto: '/productos/c/termo-media-manija.jpg',
     descripcion: 'Termo de acero de 1 litro con media manija.' },
-  { id: 'quencher-1-2', cat: 'termos', nombre: 'Vaso térmico 1,2 L con sorbete', precio: 18590, foto: '/productos/c/quencher.jpg', destacado: true,
+  { id: 'quencher-1-2', cat: 'termos', nombre: 'Vaso Stanley Quencher 1,2 L', precio: 18590, foto: '/productos/c/quencher.jpg', destacado: true,
     descripcion: 'Vaso térmico grande con manija, tapa y sorbete. Base antideslizante.', colores: ['Beige', 'Salmón'] },
   { id: 'hoppie-900', cat: 'termos', nombre: 'Vaso Hoppie 900 ml mango giratorio', precio: 18390, foto: '/productos/c/hoppie.jpg',
     descripcion: 'Vaso térmico con manija giratoria y tapa con pico.', colores: ['Gris', 'Rojo', 'Verde'] },
@@ -149,8 +150,8 @@ export const PRODUCTOS = [
     descripcion: 'Botella de aluminio liviana con pico.' },
   { id: 'canasta-matera', cat: 'termos', nombre: 'Canasta matera', precio: 9500, foto: '/productos/c/canasta-matera.jpg',
     descripcion: 'Canasta de cuerina con manija para llevar termo y mate.' },
-  { id: 'vaso-aluminio-1l', cat: 'termos', nombre: 'Vaso de aluminio (diseños de equipos)', precio: 9500, foto: '/productos/c/vaso-aluminio.jpg',
-    descripcion: 'Vaso de aluminio negro grabado. Consultá los diseños disponibles.' },
+  { id: 'vaso-aluminio-1l', cat: 'termos', nombre: 'Vaso de aluminio Newell\'s, Boca, Central y River', precio: 9500, foto: '/productos/c/vaso-aluminio.jpg',
+    descripcion: 'Vaso de aluminio negro grabado con el escudo de tu club.', colores: ['Newell\'s', 'Boca', 'Central', 'River'] },
   { id: 'vaso-termico-sorbete', cat: 'termos', nombre: 'Vaso térmico con sorbete', precio: 7999, foto: '/productos/c/vaso-termico-sorbete.jpg',
     descripcion: 'Vaso con brillos, tapa y sorbete. Llevando 12: $6.837 c/u.', colores: ['Rosa', 'Blanco', 'Negro', 'Plateado'] },
 
@@ -219,4 +220,53 @@ export const PRODUCTOS = [
     descripcion: 'Mix de adornos con Papá Noel, bastón, tambor y regalo.' },
   { id: 'boa-1', cat: 'deco', nombre: 'Boa 2 m (modelo 1)', precio: 1999, foto: '/productos/c/boa-1.jpg',
     descripcion: 'Guirnalda finita de colores.', colores: ['Verde', 'Azul', 'Rojo', 'Plateado', 'Dorado'] },
+
+  // ---------- SIN PRECIO TODAVÍA (demo) ---------- // EDITAR: cargar precios
+  // Electrónica
+  { id: 'jbl-go-4', cat: 'electronica', nombre: 'Parlante JBL Go 4', precio: null, foto: '/productos/c/jbl-go-4.jpg', descripcion: 'Parlante Bluetooth chiquito con correa. Para llevar a todos lados.' },
+  { id: 'jbl-charge-5', cat: 'electronica', nombre: 'Parlante JBL Charge 5', precio: null, foto: '/productos/c/jbl-charge-5.jpg', descripcion: 'Parlante Bluetooth tamaño mediano, ideal para la juntada.' },
+  { id: 'jbl-flip-6', cat: 'electronica', nombre: 'Parlante JBL Flip 6 RGB', precio: null, foto: '/productos/c/jbl-flip-6.jpg', descripcion: 'Parlante Bluetooth con luces RGB.' },
+  { id: 'jbl-redondo', cat: 'electronica', nombre: 'Parlante JBL redondo', precio: null, foto: '/productos/c/jbl-redondo.jpg', descripcion: 'Parlante Bluetooth compacto de forma redonda.' },
+  { id: 'parlantes-rgb', cat: 'electronica', nombre: 'Parlantes Bluetooth con luces RGB', precio: null, foto: '/productos/c/parlantes-rgb.jpg', descripcion: 'Parlantes con luces de colores para darle onda a la previa.' },
+  { id: 'battery-pack-apple', cat: 'electronica', nombre: 'Battery Pack magnético Apple', precio: null, foto: '/productos/c/battery-pack.jpg', descripcion: 'Batería magnética para iPhone. Se pega atrás y carga sin cables.' },
+  { id: 'cargador-apple-20w', cat: 'electronica', nombre: 'Cargador Apple 20 W USB-C', precio: null, foto: '/productos/c/cargador-20w.jpg', descripcion: 'Cargador de pared USB-C de 20 W para carga rápida del iPhone.' },
+  { id: 'fundas-iphone', cat: 'electronica', nombre: 'Fundas Silicone Case iPhone', precio: null, foto: '/productos/c/fundas-iphone.jpg', descripcion: 'Fundas de silicona para iPhone 11 al 17 Pro Max. Un montón de colores.' },
+  { id: 'licuadora-inova', cat: 'electronica', nombre: 'Licuadora portátil Inova Maxi Slim', precio: null, foto: '/productos/c/licuadora-inova.jpg', descripcion: 'Licuadora portátil recargable, finita y fácil de llevar.' },
+  { id: 'mini-jet-fan', cat: 'electronica', nombre: 'Mini Jet Fan', precio: null, foto: '/productos/c/mini-jet-fan.jpg', descripcion: 'Turbo ventilador de mano. Para el calorcito rosarino.' },
+  { id: 'ventilador-3en1', cat: 'electronica', nombre: 'Ventilador 3 en 1 (pie, pared y turbo)', precio: null, foto: '/productos/c/ventilador-3en1.jpg', descripcion: 'Ventilador que se usa de pie, en la pared o como turbo.' },
+  { id: 'pistola-masajeadora', cat: 'electronica', nombre: 'Pistola masajeadora', precio: null, foto: '/productos/c/pistola-masajeadora.jpg', descripcion: 'Masajeador con cabezales intercambiables y carga USB.' },
+  { id: 'pistola-agua', cat: 'electronica', nombre: 'Pistola de agua eléctrica', precio: null, foto: '/productos/c/pistola-agua.jpg', descripcion: 'Pistola de agua eléctrica para la pileta y el verano.' },
+  // Termos y mates
+  { id: 'stanley-classic', cat: 'termos', nombre: 'Termo Stanley Classic con mate', precio: null, foto: '/productos/c/stanley-classic.jpg', descripcion: 'Termo Stanley con mate a juego. Un montón de colores.', colores: ['Rojo', 'Bordó', 'Verde', 'Azul', 'Negro', 'Lila', 'Verde agua', 'Rosa', 'Fucsia'] },
+  { id: 'stanley-quencher-colores', cat: 'termos', nombre: 'Vaso Stanley Quencher', precio: null, foto: '/productos/c/stanley-quencher.jpg', descripcion: 'El vaso Stanley con manija y sorbete, en varios colores.' },
+  { id: 'stanley-flip', cat: 'termos', nombre: 'Vaso Stanley con manija 900 ml', precio: null, foto: '/productos/c/hero-vasos-manija.jpg', descripcion: 'Vaso térmico Stanley con manija y tapa con pico.', colores: ['Rosa', 'Blanco', 'Lila', 'Azul', 'Gris', 'Negro', 'Fucsia', 'Bordó'] },
+  { id: 'stanley-cervecero', cat: 'termos', nombre: 'Vaso cervecero Stanley con destapador', precio: null, foto: '/productos/c/stanley-cervecero.jpg', descripcion: 'Vaso térmico Stanley con tapa y destapador.', colores: ['Blanco', 'Rojo', 'Negro', 'Rosa', 'Verde', 'Azul', 'Bordó'] },
+  { id: 'stanley-pico-cebador', cat: 'termos', nombre: 'Termo Stanley con pico cebador', precio: null, foto: '/productos/c/stanley-pico-cebador.jpg', descripcion: 'Termo Stanley con pico cebador para matear cómodo.', colores: ['Azul', 'Blanco', 'Rosa', 'Verde', 'Negro', 'Rojo'] },
+  { id: 'stanley-mosqueton', cat: 'termos', nombre: 'Botella Stanley con mosquetón', precio: null, foto: '/productos/c/stanley-mosqueton.jpg', descripcion: 'Botella Stanley con tapa con manija y mosquetón para colgar.', colores: ['Azul', 'Verde agua', 'Negro', 'Violeta', 'Verde', 'Rosa', 'Fucsia'] },
+  { id: 'stanley-bidon', cat: 'termos', nombre: 'Bidón Stanley floreado con 2 vasitos', precio: null, foto: '/productos/c/stanley-bidon.jpg', descripcion: 'Bidón térmico floreado con manija y dos vasitos que van enganchados al costado.', colores: ['Lila', 'Verde', 'Celeste', 'Azul', 'Crema', 'Negro con estrellas'] },
+  { id: 'set-afa', cat: 'termos', nombre: 'Set matero AFA: termo, mate y yerbera', precio: null, foto: '/productos/c/set-afa.jpg', descripcion: 'Set matero de la Selección con termo, mate y yerbera.', colores: ['Blanco', 'Negro'] },
+  { id: 'botella-clubes', cat: 'termos', nombre: 'Botella River, Boca, Central y Newell\'s', precio: null, foto: '/productos/c/botella-clubes.jpg', descripcion: 'Botella de acero negra grabada con el escudo de tu club.', colores: ['River', 'Boca', 'Central', 'Newell\'s'] },
+  { id: 'botellitas-animalitos', cat: 'termos', nombre: 'Botellitas infantiles de animalitos', precio: null, foto: '/productos/c/botellitas-animalitos.jpg', descripcion: 'Botellitas para los más chicos con tapa de animalito.' },
+  // Cocina
+  { id: 'individuales', cat: 'cocina', nombre: 'Individuales redondos', precio: null, foto: '/productos/c/individuales.jpg', descripcion: 'Individuales redondos para la mesa.', colores: ['Negro', 'Verde', 'Blanco', 'Beige', 'Gris'] },
+  { id: 'vasos-colores', cat: 'cocina', nombre: 'Vasos de colores', precio: null, foto: '/productos/c/vasos-colores.jpg', descripcion: 'Vasos facetados de colores para una mesa con onda.', colores: ['Rojo', 'Turquesa', 'Rosa', 'Amarillo'] },
+  { id: 'platos-colores', cat: 'cocina', nombre: 'Platos de colores', precio: null, foto: '/productos/c/platos-colores.jpg', descripcion: 'Platos lisos en colores pastel.', colores: ['Celeste', 'Verde', 'Gris', 'Durazno'] },
+  { id: 'organizador-rollos', cat: 'cocina', nombre: 'Organizador de rollos', precio: null, foto: '/productos/c/organizador-rollos.jpg', descripcion: 'Organizador para rollos de film, aluminio y bolsas.', colores: ['Blanco', 'Gris'] },
+  // Hogar
+  { id: 'caja-negra-tapa', cat: 'hogar', nombre: 'Caja organizadora negra con tapa', precio: null, foto: '/productos/c/caja-negra.jpg', descripcion: 'Caja plástica con tapa para guardar de todo.' },
+  { id: 'humidificador', cat: 'hogar', nombre: 'Humidificador de madera', precio: null, foto: '/productos/c/humidificador.jpg', descripcion: 'Humidificador con look madera y luz. Para el cuarto o el living.' },
+  { id: 'pasto-artificial', cat: 'hogar', nombre: 'Panel de pasto artificial', precio: null, foto: '/productos/c/pasto-artificial.jpg', descripcion: 'Paneles de pasto para armar un jardín vertical en la pared.' },
+  // Belleza
+  { id: 'body-mist', cat: 'belleza', nombre: 'Body Mist Victoria\'s Secret 250 ml', precio: null, foto: '/productos/c/body-mist.jpg', descripcion: 'Body mist de 250 ml. Consultá las fragancias.' },
+  // Deco y textil
+  { id: 'arbolito-blanco', cat: 'deco', nombre: 'Arbolito blanco', precio: null, foto: '/productos/c/arbolito-blanco.jpg', descripcion: 'Arbolito de Navidad blanco.' },
+  { id: 'arbolito-nevado', cat: 'deco', nombre: 'Arbolito nevado', precio: null, foto: '/productos/c/arbolito-nevado.jpg', descripcion: 'Arbolito de Navidad con puntas nevadas.' },
+  { id: 'arbolito-nevado-chico', cat: 'deco', nombre: 'Arbolito nevado chico', precio: null, foto: '/productos/c/arbolito-nevado-chico.jpg', descripcion: 'Arbolito nevado chico, para la mesa o un rincón.' },
+  { id: 'mantel-navidad', cat: 'deco', nombre: 'Mantel navideño', precio: null, foto: '/productos/c/mantel-navidad.jpg', descripcion: 'Mantel con diseños navideños para la mesa del 24.' },
+  { id: 'mantel-bordo', cat: 'deco', nombre: 'Mantel bordó con dorado', precio: null, foto: '/productos/c/mantel-bordo.jpg', descripcion: 'Mantel bordó con estampado dorado.' },
+  { id: 'cubrecama-toy-story', cat: 'deco', nombre: 'Cubrecama Toy Story', precio: null, foto: '/productos/c/cubrecama-toy-story.jpg', descripcion: 'Cubrecama infantil de Toy Story.' },
+  { id: 'cubrecama-bluey', cat: 'deco', nombre: 'Cubrecama Bluey', precio: null, foto: '/productos/c/cubrecama-bluey.jpg', descripcion: 'Cubrecama infantil de Bluey.' },
+  { id: 'fundas-sillon', cat: 'deco', nombre: 'Fundas de sillón Cacharel 3+2+1', precio: null, foto: '/productos/c/fundas-sillon.jpg', descripcion: 'Juego de fundas elastizadas para sillón de 3, 2 y 1 cuerpo.' },
+  { id: 'alfombra-termica', cat: 'deco', nombre: 'Alfombra térmica', precio: null, foto: '/productos/c/alfombra-termica.jpg', descripcion: 'Alfombra con cable para el invierno. Consultá medidas.' },
+  { id: 'alfombra-bano', cat: 'deco', nombre: 'Alfombra antideslizante para baño', precio: null, foto: '/productos/c/alfombra-bano.jpg', descripcion: 'Alfombra con sopapitas para la ducha.' },
 ];

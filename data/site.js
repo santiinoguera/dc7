@@ -50,7 +50,7 @@ export const HERO = {
   fotos: [
     { src: '/productos/c/batidora-liliana.jpg', alt: 'Batidora planetaria Liliana', href: '#prod-batidora-liliana' },
     { src: '/productos/c/freidora-liliana.jpg', alt: 'Freidora de aire Liliana', href: '#prod-freidora-liliana' },
-    { src: '/productos/airpods-abiertos.jpg', alt: 'Auriculares tipo AirPods Pro', href: '#estrella' },
+    { src: '/productos/airpods-abiertos.jpg', alt: 'AirPods Pro', href: '#estrella' },
     { src: '/productos/c/camara-wifi.jpg', alt: 'Cámara Wi-Fi triple visor', href: '#prod-camara-wifi' },
     { src: '/productos/c/jarra-acero-2l.jpg', alt: 'Jarra térmica 2 L', href: '#prod-jarra-acero-2l' },
     { src: '/productos/c/cortadora-remington.jpg', alt: 'Cortadora Remington', href: '#prod-cortadora-remington' },

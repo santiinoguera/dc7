@@ -67,7 +67,7 @@ export const CAMPANAS = [
     fechaLimitePedidos: null, // EDITAR: ej '2026-11-30'
     productos: [
       // EDITAR: precios y descuentos. Hoy no hay descuento cargado: precioPromo en null.
-      { nombre: 'Auriculares tipo AirPods Pro', foto: '/productos/airpods-caja-anc.jpg', precio: 27000, precioPromo: null }, // EDITAR
+      { nombre: 'AirPods Pro', foto: '/productos/airpods-caja-anc.jpg', precio: 27000, precioPromo: null }, // EDITAR
       { nombre: 'Smartwatch Ultra + 7 mallas', foto: '/productos/smartwatch-ultra-10.jpg', precio: null, precioPromo: null }, // EDITAR
       { nombre: 'Auriculares vincha inalámbricos', foto: '/productos/auriculares-vincha.jpg', precio: null, precioPromo: null }, // EDITAR
       { nombre: 'Power bank 12.000 mAh', foto: '/productos/power-bank.jpg', precio: null, precioPromo: null }, // EDITAR

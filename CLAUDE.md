@@ -46,8 +46,7 @@ Mobile first: diseñar primero para ~390 px, sin scroll horizontal.
 1. **No inventar precios, stock, descuentos ni políticas.** Lo que falte va como dato de ejemplo o `null` con un comentario `// EDITAR`.
 2. **Todo el texto editable vive en `/data`** (o en constantes), nunca escrito directo en los componentes.
 3. Antes de escribir código para un pedido nuevo, mostrar el plan de archivos y esperar el OK.
-4. No presentar productos como de marca original si no lo son: usar "tipo AirPods", "vaso térmico", etc.
-   (Excepción: productos de marca que sí se venden como tales, ej. la freidora Liliana.)
+4. Nombres de producto: con el nombre de la marca (Stanley, JBL, Apple, AFA, clubes, etc.), por pedido del dueño (28/11/2026).
 5. La única promo segura hoy es "envío bonificado en Rosario y zona".
 
 ## Estructura
@@ -67,7 +66,7 @@ La sección Navidad (`components/Christmas.js`, datos en `data/navidad.js`) est�
 - `PRODUCTOS`: id, cat, nombre, precio (de **venta**, o null = "Consultá precio"), foto (`/productos/c/<id>.jpg` o null), descripcion, colores, destacado.
 - Precios de venta = los que pasa el dueño (base: costo del proveedor + ganancia). Nunca mostrar el costo.
 - Descripciones cortas, con la voz de DC7, sin inventar datos técnicos (potencia, material, capacidad) que no estén confirmados.
-- Productos con logos de otras marcas/clubes (Stanley, escudos, AFA, personajes): nombre genérico ("tipo Stanley", "diseños de equipos").
+- Productos con marca: se nombran con la marca (ver regla 4). Productos sin precio todavía: `precio: null` (muestra "Consultá precio").
 - Navegación por hash: `#cat-<id>` filtra la categoría y baja al catálogo; `#prod-<id>` abre la ficha del producto. Se usan desde Categorías, Destacados y el carrusel del inicio.
 - Carrusel del inicio: `HERO.fotos` y `HERO.segundos` en `data/site.js`.
 
