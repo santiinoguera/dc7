@@ -54,13 +54,22 @@ Mobile first: diseñar primero para ~390 px, sin scroll horizontal.
 ```
 app/            layout (SEO, OG, fuentes, botón flotante), page (orden de secciones), íconos
 components/     una sección por archivo + BotonWhatsApp, ProductCard, Countdown, usePromos
-data/           site.js (contacto y todos los textos), products.js, categories.js, catalogo.js (lista de precios), navidad.js,
+data/           site.js (contacto, textos y fotos del carrusel), products.js (producto estrella), catalogo.js (categorías y productos), navidad.js,
                 reviews.js, faq.js, promos.js
 lib/            whatsapp.js (links), format.js (precios), promos.js (lógica de campañas)
 public/         logo.png, og-image.jpg, productos/*.jpg
 ```
-Orden de la página: BarraPromo (contador arriba de todo), Header, Hero, Producto estrella, **Promos**, Categorías, Destacados, Lista de precios, Cómo comprar, Envíos, Pagos, Opiniones, FAQ, Footer.
+Orden de la página: BarraPromo (contador arriba de todo), Header, Hero (carrusel de fotos), Producto estrella, **Promos**, Destacados, Categorías, Catálogo, Cómo comprar, Envíos, Pagos, Opiniones, FAQ, Footer.
 La sección Navidad (`components/Christmas.js`, datos en `data/navidad.js`) está **pausada**: no se importa en `app/page.js`. Para volver a mostrarla, agregarla después de Destacados.
+
+## Catálogo (`data/catalogo.js`)
+- `CATEGORIAS`: id, nombre, emoji, descripción y foto. Son las tarjetas de "¿Qué andás buscando?" y los filtros del catálogo.
+- `PRODUCTOS`: id, cat, nombre, precio (de **venta**, o null = "Consultá precio"), foto (`/productos/c/<id>.jpg` o null), descripcion, colores, destacado.
+- Precios de venta = los que pasa el dueño (base: costo del proveedor + ganancia). Nunca mostrar el costo.
+- Descripciones cortas, con la voz de DC7, sin inventar datos técnicos (potencia, material, capacidad) que no estén confirmados.
+- Productos con logos de otras marcas/clubes (Stanley, escudos, AFA, personajes): nombre genérico ("tipo Stanley", "diseños de equipos").
+- Navegación por hash: `#cat-<id>` filtra la categoría y baja al catálogo; `#prod-<id>` abre la ficha del producto. Se usan desde Categorías, Destacados y el carrusel del inicio.
+- Carrusel del inicio: `HERO.fotos` y `HERO.segundos` en `data/site.js`.
 
 ## Promos por fecha (`data/promos.js`)
 La sección se arma sola según la fecha de hoy en hora de Argentina (UTC-3). El cálculo corre **en el navegador**

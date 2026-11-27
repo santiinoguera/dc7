@@ -45,6 +45,8 @@ module.exports = {
           '60%, 100%': { transform: 'translateX(250%)' },
         },
         // Sello de la campaña flotando suave
+        aparecer: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+        subir: { '0%': { transform: 'translateY(100%)' }, '100%': { transform: 'translateY(0)' } },
         flotar: {
           '0%, 100%': { transform: 'translateY(0) rotate(-4deg)' },
           '50%': { transform: 'translateY(-8px) rotate(2deg)' },
@@ -55,6 +57,8 @@ module.exports = {
         salto: 'salto 0.25s ease-out',
         brillo: 'brillo 3.5s ease-in-out infinite',
         flotar: 'flotar 4s ease-in-out infinite',
+        aparecer: 'aparecer 0.2s ease-out both',
+        subir: 'subir 0.32s cubic-bezier(0.22, 1, 0.36, 1) both',
       },
     },
   },

@@ -29,7 +29,7 @@ export const HEADER = {
   menu: [
     { texto: 'Promos', href: '#promos', soloConPromo: true }, // se oculta solo si no hay campaña activa
     { texto: 'Productos', href: '#productos' },
-    { texto: 'Precios', href: '#precios' },
+    { texto: 'Catálogo', href: '#catalogo' },
     { texto: 'Cómo comprar', href: '#como-comprar' },
     { texto: 'Envíos', href: '#envios' },
     { texto: 'Preguntas', href: '#preguntas' },
@@ -45,20 +45,33 @@ export const HERO = {
   envio: '🚚 Envío bonificado en Rosario y zona',
   botonWhatsapp: 'Pedí por WhatsApp',
   botonProductos: 'Ver productos',
-  foto: '/productos/termos-mates.jpg',
-  fotoAlt: 'Termos y mates de colores en un estante de DC7',
+  // Fotos que van pasando en el inicio. href lleva a la ficha del producto (#prod-<id>) o a una categoría (#cat-<id>).
+  segundos: 3.5, // cada cuántos segundos cambia la foto
+  fotos: [
+    { src: '/productos/c/batidora-liliana.jpg', alt: 'Batidora planetaria Liliana', href: '#prod-batidora-liliana' },
+    { src: '/productos/c/freidora-liliana.jpg', alt: 'Freidora de aire Liliana', href: '#prod-freidora-liliana' },
+    { src: '/productos/airpods-abiertos.jpg', alt: 'Auriculares tipo AirPods Pro', href: '#estrella' },
+    { src: '/productos/c/camara-wifi.jpg', alt: 'Cámara Wi-Fi triple visor', href: '#prod-camara-wifi' },
+    { src: '/productos/c/jarra-acero-2l.jpg', alt: 'Jarra térmica 2 L', href: '#prod-jarra-acero-2l' },
+    { src: '/productos/c/cortadora-remington.jpg', alt: 'Cortadora Remington', href: '#prod-cortadora-remington' },
+    { src: '/productos/c/hero-vasos-manija.jpg', alt: 'Vasos térmicos', href: '#cat-termos' },
+    { src: '/productos/c/sarten-tefal-26.jpg', alt: 'Sartenes Tefal', href: '#prod-sarten-tefal-26' },
+    { src: '/productos/c/licuadora-portatil.jpg', alt: 'Licuadora portátil', href: '#prod-licuadora-portatil' },
+    { src: '/productos/c/hero-paraguas.jpg', alt: 'Paraguas', href: '#prod-paraguas-adulto' },
+    { src: '/productos/c/arbolito-25.jpg', alt: 'Deco y Navidad', href: '#cat-deco' },
+  ],
 };
 
 export const DESTACADOS = {
   titulo: 'Lo que más sale 🔥',
-  subtitulo: 'Una muestra de lo que tenemos. Si buscás algo que no ves, escribinos que seguro lo conseguimos.',
-  boton: 'Pedir por WhatsApp',
+  subtitulo: 'Deslizá y tocá el que te guste para ver todos los detalles.',
+  boton: 'Ver más',
   sinPrecio: 'Consultá precio 💬',
 };
 
 export const CATEGORIAS_TEXTOS = {
   titulo: '¿Qué andás buscando?',
-  subtitulo: 'Tocá una categoría y preguntanos qué hay. Te mandamos fotos y precios al toque.',
+  subtitulo: 'Tocá una categoría y te llevamos directo a esos productos.',
 };
 
 export const NAVIDAD_TEXTOS = {

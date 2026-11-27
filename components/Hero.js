@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import { HERO, MENSAJE_GENERAL } from '@/data/site';
 import BotonWhatsApp from './BotonWhatsApp';
+import HeroCarrusel from './HeroCarrusel';
 
 export default function Hero() {
   return (
@@ -25,7 +25,7 @@ export default function Hero() {
               {HERO.botonWhatsapp}
             </BotonWhatsApp>
             <a
-              href="#productos"
+              href="#catalogo"
               className="inline-flex items-center justify-center rounded-full border-2 border-negro px-7 py-4 font-titulo text-lg font-semibold text-negro transition-colors hover:bg-negro hover:text-blanco"
             >
               {HERO.botonProductos} 👇
@@ -36,17 +36,7 @@ export default function Hero() {
         <div className="relative">
           <div className="absolute -right-6 -top-6 h-40 w-40 rounded-full bg-amarillo md:h-56 md:w-56" aria-hidden="true" />
           <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-naranja/90" aria-hidden="true" />
-          <div className="relative overflow-hidden rounded-[2rem] shadow-tarjeta">
-            <Image
-              src={HERO.foto}
-              alt={HERO.fotoAlt}
-              width={1200}
-              height={675}
-              priority
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="aspect-[4/3] w-full object-cover"
-            />
-          </div>
+          <HeroCarrusel />
         </div>
       </div>
     </section>

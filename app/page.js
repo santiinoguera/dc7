@@ -24,8 +24,8 @@ export default function Home() {
         <Hero />
         <StarProduct />
         <PromosSection />
-        <Categories />
         <FeaturedProducts />
+        <Categories />
         <Catalogo />
         <HowToBuy />
         <Shipping />
