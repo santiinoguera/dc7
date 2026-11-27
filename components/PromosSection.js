@@ -1,6 +1,8 @@
 'use client';
 
 import Image from 'next/image';
+import { useState } from 'react';
+import { PRODUCTOS } from '@/data/catalogo';
 import { BENEFICIO_BASE, LINEA_FIJA, PROMOS_TEXTOS as T } from '@/data/promos';
 import { formatoPrecio } from '@/lib/format';
 import { fechaCorta } from '@/lib/promos';
@@ -41,13 +43,24 @@ const TEMAS = {
   },
 };
 
+const INICIALES = 12; // cuántos productos se ven antes de tocar "Ver todos"
+
+// Lista de productos de la campaña: propia o todo el catálogo.
+function productosDe(c) {
+  if (c.productos !== 'catalogo') return c.productos;
+  const promo = c.preciosPromo || {};
+  return PRODUCTOS.map((p) => ({ nombre: p.nombre, foto: p.foto, precio: p.precio, precioPromo: promo[p.id] ?? null }));
+}
+
 export default function PromosSection() {
   const { listo, ahora, actual, siguiente } = usePromos(1000);
+  const [todos, setTodos] = useState(false);
 
   // Sin campaña activa (o antes de calcular en el navegador): no se renderiza nada.
   if (!listo || !actual) return null;
 
   const c = actual.campana;
+  const productos = productosDe(c);
   const tema = TEMAS[c.colorDestacado] || TEMAS.naranja;
   const restante = actual.objetivo - ahora;
   const textoCuenta = actual.etapa === 'previa' ? `${T.faltan} ${c.textoCuenta}` : c.textoExtension;
@@ -111,15 +124,15 @@ export default function PromosSection() {
         </div>
 
         {/* Productos de la campaña */}
-        {c.productos.length > 0 && (
-          <ul className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
-            {c.productos.map((p) => (
+        {productos.length > 0 && (
+          <ul className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+            {(todos ? productos : productos.slice(0, INICIALES)).map((p) => (
               <li key={p.nombre} className="flex flex-col overflow-hidden rounded-3xl bg-blanco shadow-tarjeta">
-                <div className="relative aspect-square bg-amarillo">
+                <div className="relative aspect-square bg-blanco">
                   {p.foto ? (
-                    <Image src={p.foto} alt={p.nombre} fill sizes="(min-width: 1024px) 33vw, 50vw" className="object-cover" />
+                    <Image src={p.foto} alt={p.nombre} fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-contain p-2" />
                   ) : (
-                    <span className="flex h-full items-center justify-center text-6xl" aria-hidden="true">
+                    <span className="flex h-full items-center justify-center bg-amarillo text-6xl" aria-hidden="true">
                       {c.emoji}
                     </span>
                   )}
@@ -143,6 +156,16 @@ export default function PromosSection() {
               </li>
             ))}
           </ul>
+        )}
+
+        {productos.length > INICIALES && (
+          <button
+            type="button"
+            onClick={() => setTodos((v) => !v)}
+            className="mx-auto mt-6 flex rounded-full border-2 border-negro px-6 py-3 font-titulo font-semibold transition-colors hover:bg-negro hover:text-blanco"
+          >
+            {todos ? T.verMenos : T.verTodos.replace('{n}', productos.length)}
+          </button>
         )}
 
         {/* Línea fija */}

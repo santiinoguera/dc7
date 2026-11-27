@@ -109,6 +109,7 @@ La sección se arma sola según la fecha de hoy en hora de Argentina (UTC-3). El
 - "Después viene:" muestra otra campaña activa superpuesta o, si no hay, la próxima en empezar.
 - Barra superior (`components/BarraPromo.js`): fija arriba del header, con la cuenta regresiva de la campaña activa, animada (entra desde arriba, punto que late, segundos con salto, brillo). Se cierra con la ✕ (por esa visita, `sessionStorage`). Ocupa `--barra` (2.5rem): header, hero y anclas usan esa variable para correrse.
 - Sin campaña activa: la sección no se renderiza, la barra superior tampoco y el link "Promos" del header desaparece (`soloConPromo: true` en `data/site.js`).
+- `productos: 'catalogo'` (hoy Black Friday) muestra todo `data/catalogo.js` (12 primero + botón "Ver todos"); los descuentos van en `preciosPromo: { id: precio }`.
 - `precio: null` → "Consultá precio". `precioPromo: null` → solo precio normal. Con `precioPromo` → precio tachado + chip PROMO.
 - Probar otra fecha: `http://localhost:3000/?fecha=2026-12-20` (simula ese día al mediodía).
 

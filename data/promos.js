@@ -46,6 +46,8 @@ export const PROMOS_TEXTOS = {
   barraTermina: 'termina en',
   barraVer: 'Ver promos',
   barraCerrar: 'Cerrar aviso',
+  verTodos: 'Ver los {n} productos 👇',
+  verMenos: 'Ver menos',
 };
 
 export const CAMPANAS = [
@@ -65,15 +67,10 @@ export const CAMPANAS = [
     colorDestacado: 'negro',
     mensajeWhatsApp: '¡Hola DC7! 👋 Vengo por la promo de Black Friday 🔥',
     fechaLimitePedidos: null, // EDITAR: ej '2026-11-30'
-    productos: [
-      // EDITAR: precios y descuentos. Hoy no hay descuento cargado: precioPromo en null.
-      { nombre: 'AirPods Pro', foto: '/productos/airpods-caja-anc.jpg', precio: 27000, precioPromo: null }, // EDITAR
-      { nombre: 'Smartwatch Ultra + 7 mallas', foto: '/productos/smartwatch-ultra-10.jpg', precio: null, precioPromo: null }, // EDITAR
-      { nombre: 'Auriculares vincha inalámbricos', foto: '/productos/auriculares-vincha.jpg', precio: null, precioPromo: null }, // EDITAR
-      { nombre: 'Power bank 12.000 mAh', foto: '/productos/power-bank.jpg', precio: null, precioPromo: null }, // EDITAR
-      { nombre: 'Cable USB-C + cargador 20 W', foto: '/productos/cable-cargador.jpg', precio: null, precioPromo: null }, // EDITAR
-      { nombre: 'Freidora de aire Liliana 6,5 L', foto: '/productos/freidora-liliana.jpg', precio: null, precioPromo: null }, // EDITAR
-    ],
+    // 'catalogo' = muestra TODOS los productos de data/catalogo.js con su precio normal.
+    // Para poner un descuento a un producto del catálogo, cargalo en preciosPromo: { 'id-del-producto': 99999 }.
+    productos: 'catalogo',
+    preciosPromo: {}, // EDITAR: ej { 'freidora-liliana': 99999 }
   },
 ];
 
