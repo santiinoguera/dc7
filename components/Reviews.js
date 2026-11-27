@@ -1,8 +1,9 @@
-import { OPINIONES } from '@/data/reviews';
+import { MOSTRAR_OPINIONES, OPINIONES } from '@/data/reviews';
 import { OPINIONES_TEXTOS } from '@/data/site';
 import TituloSeccion from './TituloSeccion';
 
 export default function Reviews() {
+  if (!MOSTRAR_OPINIONES) return null;
   return (
     <section id="opiniones" className="scroll-mt-[calc(5rem+var(--barra,0px))] bg-amarillo/50 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4">

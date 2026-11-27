@@ -238,7 +238,6 @@ export const PRODUCTOS = [
   { id: 'pistola-agua', cat: 'electronica', nombre: 'Pistola de agua eléctrica', precio: null, foto: '/productos/c/pistola-agua.jpg', descripcion: 'Pistola de agua eléctrica para la pileta y el verano.' },
   // Termos y mates
   { id: 'stanley-classic', cat: 'termos', nombre: 'Termo Stanley Classic con mate', precio: null, foto: '/productos/c/stanley-classic.jpg', descripcion: 'Termo Stanley con mate a juego. Un montón de colores.', colores: ['Rojo', 'Bordó', 'Verde', 'Azul', 'Negro', 'Lila', 'Verde agua', 'Rosa', 'Fucsia'] },
-  { id: 'stanley-quencher-colores', cat: 'termos', nombre: 'Vaso Stanley Quencher', precio: null, foto: '/productos/c/stanley-quencher.jpg', descripcion: 'El vaso Stanley con manija y sorbete, en varios colores.' },
   { id: 'stanley-flip', cat: 'termos', nombre: 'Vaso Stanley con manija 900 ml', precio: null, foto: '/productos/c/hero-vasos-manija.jpg', descripcion: 'Vaso térmico Stanley con manija y tapa con pico.', colores: ['Rosa', 'Blanco', 'Lila', 'Azul', 'Gris', 'Negro', 'Fucsia', 'Bordó'] },
   { id: 'stanley-cervecero', cat: 'termos', nombre: 'Vaso cervecero Stanley con destapador', precio: null, foto: '/productos/c/stanley-cervecero.jpg', descripcion: 'Vaso térmico Stanley con tapa y destapador.', colores: ['Blanco', 'Rojo', 'Negro', 'Rosa', 'Verde', 'Azul', 'Bordó'] },
   { id: 'stanley-pico-cebador', cat: 'termos', nombre: 'Termo Stanley con pico cebador', precio: null, foto: '/productos/c/stanley-pico-cebador.jpg', descripcion: 'Termo Stanley con pico cebador para matear cómodo.', colores: ['Azul', 'Blanco', 'Rosa', 'Verde', 'Negro', 'Rojo'] },
@@ -268,4 +267,18 @@ export const PRODUCTOS = [
   { id: 'fundas-sillon', cat: 'deco', nombre: 'Fundas de sillón Cacharel 3+2+1', precio: null, foto: '/productos/c/fundas-sillon.jpg', descripcion: 'Juego de fundas elastizadas para sillón de 3, 2 y 1 cuerpo.' },
   { id: 'alfombra-termica', cat: 'deco', nombre: 'Alfombra térmica', precio: null, foto: '/productos/c/alfombra-termica.jpg', descripcion: 'Alfombra con cable para el invierno. Consultá medidas.' },
   { id: 'alfombra-bano', cat: 'deco', nombre: 'Alfombra antideslizante para baño', precio: null, foto: '/productos/c/alfombra-bano.jpg', descripcion: 'Alfombra con sopapitas para la ducha.' },
+  // Faltaban de la primera lista (26/11). EDITAR: cargar precio de venta.
+  { id: 'secador-remington', cat: 'electronica', nombre: 'Secador de pelo Remington 2.200 W', precio: null, foto: null, descripcion: 'Secador de pelo Remington de 2.200 W.' },
+  { id: 'afeitadora-remington', cat: 'electronica', nombre: 'Afeitadora Remington F1 Style', precio: null, foto: null, descripcion: 'Afeitadora Remington F1 Style.' },
+  { id: 'cortadora-patillera', cat: 'electronica', nombre: 'Cortadora de pelo patillera', precio: null, foto: null, descripcion: 'Patillera para terminaciones y detalles.' },
+  { id: 'bandeja-recta', cat: 'cocina', nombre: 'Bandeja recta 30 × 40 × 10 cm', precio: null, foto: null, descripcion: 'Bandeja recta de 30 × 40 × 10 cm.' },
+  { id: 'manopla', cat: 'cocina', nombre: 'Manopla para cocina', precio: null, foto: null, descripcion: 'Manopla para sacar las cosas del horno sin quemarte.' },
+  { id: 'pizzera-35', cat: 'cocina', nombre: 'Pizzera N.º 35', precio: null, foto: null, descripcion: 'Pizzera de 35 cm. La del viernes a la noche.' },
+  { id: 'utensilios-carol', cat: 'cocina', nombre: 'Set de utensilios Carol x12', precio: null, foto: null, descripcion: 'Set de 12 utensilios de cocina Carol.' },
+  { id: 'esponja-skora', cat: 'cocina', nombre: 'Set de esponjas Skora', precio: null, foto: null, descripcion: 'Set de esponjas Skora.' },
+  { id: 'mate-algarrobo', cat: 'termos', nombre: 'Mate de algarrobo', precio: null, foto: null, descripcion: 'Mate de madera de algarrobo.' },
+  { id: 'termo-grabado', cat: 'termos', nombre: 'Termo media manija grabado 1 L (Newell\'s y Boca)', precio: null, foto: null, descripcion: 'Termo de acero de 1 litro grabado con el escudo de tu club.', colores: ['Newell\'s', 'Boca'] },
+  { id: 'neceser', cat: 'belleza', nombre: 'Neceser multiuso', precio: null, foto: null, descripcion: 'Neceser para el maquillaje, el baño o el viaje.' },
+  { id: 'esponjas-x4-1', cat: 'belleza', nombre: 'Set de esponjas x4 (modelo 1)', precio: null, foto: null, descripcion: 'Set de 4 esponjitas de maquillaje.' },
+  { id: 'esponjas-x4-2', cat: 'belleza', nombre: 'Set de esponjas x4 (modelo 2)', precio: null, foto: null, descripcion: 'Set de 4 esponjitas de maquillaje.' },
 ];

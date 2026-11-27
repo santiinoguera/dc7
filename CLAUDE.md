@@ -53,7 +53,7 @@ Mobile first: diseñar primero para ~390 px, sin scroll horizontal.
 ```
 app/            layout (SEO, OG, fuentes, botón flotante), page (orden de secciones), íconos
 components/     una sección por archivo + BotonWhatsApp, ProductCard, Countdown, usePromos
-data/           site.js (contacto, textos y fotos del carrusel), products.js (producto estrella), catalogo.js (categorías y productos), navidad.js,
+data/           site.js (contacto, textos y fotos del carrusel), products.js (solo producto estrella), catalogo.js (categorías y productos), navidad.js,
                 reviews.js, faq.js, promos.js
 lib/            whatsapp.js (links), format.js (precios), promos.js (lógica de campañas)
 public/         logo.png, og-image.jpg, productos/*.jpg
@@ -69,6 +69,9 @@ La sección Navidad (`components/Christmas.js`, datos en `data/navidad.js`) est�
 - Productos con marca: se nombran con la marca (ver regla 4). Productos sin precio todavía: `precio: null` (muestra "Consultá precio").
 - Navegación por hash: `#cat-<id>` filtra la categoría y baja al catálogo; `#prod-<id>` abre la ficha del producto. Se usan desde Categorías, Destacados y el carrusel del inicio.
 - Carrusel del inicio: `HERO.fotos` y `HERO.segundos` en `data/site.js`.
+
+## Opiniones
+`data/reviews.js` → `MOSTRAR_OPINIONES = false` hasta cargar reseñas reales. Nunca publicar reseñas inventadas.
 
 ## Promos por fecha (`data/promos.js`)
 La sección se arma sola según la fecha de hoy en hora de Argentina (UTC-3). El cálculo corre **en el navegador**

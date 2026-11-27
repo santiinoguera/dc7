@@ -5,6 +5,10 @@
 // Si una reseña no tiene barrio, dejá barrio: ''.
 // =============================================================
 
+// EDITAR: poné true cuando reemplaces las reseñas de ejemplo por reales.
+// Mientras sea false, la sección "Opiniones" no se muestra (no publicar reseñas inventadas).
+export const MOSTRAR_OPINIONES = false;
+
 export const OPINIONES = [
   {
     nombre: 'Cliente de ejemplo 1', // EDITAR
